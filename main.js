@@ -6,7 +6,7 @@ const { app, BrowserWindow, Menu, ipcMain } = electron
 
 //testing:
  const add = (x, y) => {
-  return x+y
+  return x + y
 }
 
 //SET ENV to 'production so the 'DevTools' menu disappear

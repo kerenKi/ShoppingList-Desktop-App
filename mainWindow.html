@@ -3,16 +3,28 @@
 <head>
   <title>ShoppingList</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+  <style>
+    .content {
+      margin: auto;
+      width: 50%;
+      text-align: center;
+    }
+    li:hover{
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body>
+<body >
   <nav>
     <div class="nav-wrapper">
       <a class="brand-logo center">ShoppingList</a>
     </div>
   </nav>
-  
-  <ul></ul>
+  <div class="content">
+    <p>To add an item check the File menu</p>
+    <ul></ul>
+    <p>To remove an item double click on it</p>
+  </div>
   <script>
     const { ipcRenderer } = require('electron')
     const ul = document.querySelector('ul')
@@ -42,6 +54,7 @@
         ul.className = ''
       }
     }
+   
 
   </script>
 </body>

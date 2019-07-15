@@ -4,6 +4,11 @@ const path = require('path')
 
 const { app, BrowserWindow, Menu, ipcMain } = electron
 
+//testing:
+ const add = (x, y) => {
+  return x + y
+}
+
 //SET ENV to 'production so the 'DevTools' menu disappear
 process.env.NODE_ENV = 'production'
 
@@ -51,6 +56,7 @@ ipcMain.on('item:add', (event, item) => {
   mainWindow.webContents.send('item:add', item)
   addWindow.close()
 })
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
@@ -180,3 +186,5 @@ if(process.env.NODE_ENV !== 'production'){
     ]
   })
 }
+
+module.exports = {add}

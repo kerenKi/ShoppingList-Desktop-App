@@ -40,6 +40,6 @@ $npm run package-linux
 ```
 
 ### `Useful links`
-- [Youtube tutorial - Build an Electron App in Under 60 Minutes](https://www.youtube.com/watch?v=kN1Czs0m1SU&t=2s)
+- [Youtube tutorial by Traversy Media](https://www.youtube.com/watch?v=kN1Czs0m1SU&t=2s)
 - [Electron packager tutorial](https://www.christianengvall.se/electron-packager-tutorial/)
 - [Add costume Icon](https://www.christianengvall.se/electron-app-icons/)

@@ -1,9 +1,13 @@
 const electron = require('electron')
 const url = require('url')
 const path = require('path')
-const sendmail = require('sendmail')();
 
 const { app, BrowserWindow, Menu, ipcMain } = electron
+
+//testing:
+ const add = (x, y) => {
+  return x+y
+}
 
 //SET ENV to 'production so the 'DevTools' menu disappear
 process.env.NODE_ENV = 'production'
@@ -51,19 +55,6 @@ ipcMain.on('item:add', (event, item) => {
   console.log('item:', item)//TODO: Delete later
   mainWindow.webContents.send('item:add', item)
   addWindow.close()
-})
-
-ipcMain.on('sendMail',(event, email) => {
-  console.log('sending email')
-  sendmail({
-    from: 'kkinberg13@gmail.com',
-    to: 'kkinberg13@gmail.com',
-    subject: 'Your shopping list',
-    html: 'Mail of test sendmail ',
-  }, function(err, reply) {
-    console.log(err && err.stack);
-    console.dir(reply);
-  });
 })
 
 
@@ -195,3 +186,5 @@ if(process.env.NODE_ENV !== 'production'){
     ]
   })
 }
+
+module.exports = {add}

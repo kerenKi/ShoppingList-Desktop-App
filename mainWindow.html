@@ -24,10 +24,6 @@
     <p>To add an item check the File menu</p>
     <ul></ul>
     <p>To remove an item double click on it</p>
-
-    <button class="btn waves-effect waves-light" id="emailButton" type="submit">
-      <i class="material-icons right">Send to mail</i>
-    </button>
   </div>
   <script>
     const { ipcRenderer } = require('electron')
@@ -58,18 +54,6 @@
         ul.className = ''
       }
     }
-
-    //Send email
-    const emailButton = document.getElementById('emailButton')
-    emailButton.addEventListener('click', sendEmail)
-
-   function sendEmail(event) {
-     console.log('sendEmail()')
-    event.preventDefault()
-    // const item = document.querySelector('#item').value
-    //sending the item to main.js with the name 'item:add' and the value of the item
-    ipcRenderer.send('sendMail', 'example@gmail.com')
-   }
    
 
   </script>

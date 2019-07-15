@@ -1,6 +1,7 @@
 const electron = require('electron')
 const url = require('url')
 const path = require('path')
+const sendmail = require('sendmail')();
 
 const { app, BrowserWindow, Menu, ipcMain } = electron
 
@@ -51,6 +52,20 @@ ipcMain.on('item:add', (event, item) => {
   mainWindow.webContents.send('item:add', item)
   addWindow.close()
 })
+
+ipcMain.on('sendMail',(event, email) => {
+  console.log('sending email')
+  sendmail({
+    from: 'kkinberg13@gmail.com',
+    to: 'kkinberg13@gmail.com',
+    subject: 'Your shopping list',
+    html: 'Mail of test sendmail ',
+  }, function(err, reply) {
+    console.log(err && err.stack);
+    console.dir(reply);
+  });
+})
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {

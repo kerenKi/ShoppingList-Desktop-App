@@ -13,7 +13,9 @@
   },
   "author": "Keren Kinberg",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "sendmail": "^1.6.1"
+  },
   "devDependencies": {
     "electron": "^5.0.6",
     "electron-packager": "^14.0.1"

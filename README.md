@@ -9,6 +9,7 @@ It is also possible to delete a single item by double clicking on it.
 ### `Installation with NPM`
 
 To install and run this app:
+
 1.Clone the repo and cd 
 
 ```

@@ -10,7 +10,7 @@ It is also possible to delete a single item by double clicking on it.
 
 To install and run this app:
 
-1.Clone the repo and cd 
+1. Clone the repo and cd 
 
 ```
 $ git clone git@github.com:kerenKi/ShoppingList-Desktop-App.git

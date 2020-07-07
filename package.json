@@ -18,7 +18,7 @@
     "sendmail": "^1.6.1"
   },
   "devDependencies": {
-    "electron": "^5.0.6",
+    "electron": "^7.2.4",
     "electron-packager": "^14.0.1",
     "jest": "^24.8.0"
   }
